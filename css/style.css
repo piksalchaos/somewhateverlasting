@@ -3,18 +3,11 @@
    "how to change link color." */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-@font-face {
-  font-family: 'BigBlue_TerminalPlus';
-  src: url('/fonts/BigBlue_TerminalPlus.eot');
-  src: url('/fonts/BigBlue_TerminalPluswebfont.eot?#iefix') format('embedded-opentype'),
-       url('/fonts/BigBlue_TerminalPluswebfont.woff') format('woff'),
-       url('/fonts/BigBlue_TerminalPlus.ttf')  format('truetype')
-}
 
 body, div, main, section, article {
   box-sizing: border-box; 
-  font-family: 'BigBlue_TerminalPlus';
-  font-size: 12px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
 }
 
 /* universal background color */
@@ -44,7 +37,7 @@ header img {
  
 .writePageTitle h1 {
   font-size: 24px;
-  /* font-weight: 400; */
+  font-weight: 400;
   margin: 0;
 }
 
@@ -136,7 +129,7 @@ header #nav a:hover {
 
   font-family: "Montserrat", sans-serif;
   font-size: xxx-large;
-  /* font-weight: bold; */
+  font-weight: bold;
 }
 
 
@@ -246,7 +239,7 @@ footer {
   margin-bottom: 15px;
   text-align: center;
   
-  font-size: 12px;
+  font-size: 16px;
 }
 
 footer p {

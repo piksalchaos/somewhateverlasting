@@ -64,7 +64,7 @@ const pgData = [
         altText: "bruh", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
         imageFiles: 1, //how many image files this page is split into
         authorNotes: `
-            <p>Instead of coding the entire webcomic website myself, I found this cool webcomic template claled Rarebit which makes things super convenient! Hopefully at this point I can start pumping out weekly bad comics.</p>
+            <p>Instead of coding the entire webcomic website myself, I found this cool webcomic template called Rarebit which makes things super convenient! Hopefully at this point I can start pumping out weekly bad comics.</p>
             `,
     }
 ];
