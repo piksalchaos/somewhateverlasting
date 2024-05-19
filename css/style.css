@@ -1,0 +1,260 @@
+/* CSS is how you can add style to your website, such as colors, fonts, and positioning of your
+  HTML content. To learn how to do something, just try searching Google for questions like
+   "how to change link color." */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@font-face {
+  font-family: 'BigBlue_TerminalPlus';
+  src: url('/fonts/BigBlue_TerminalPlus.eot');
+  src: url('/fonts/BigBlue_TerminalPluswebfont.eot?#iefix') format('embedded-opentype'),
+       url('/fonts/BigBlue_TerminalPluswebfont.woff') format('woff'),
+       url('/fonts/BigBlue_TerminalPlus.ttf')  format('truetype')
+}
+
+body, div, main, section, article {
+  box-sizing: border-box; 
+  font-family: 'BigBlue_TerminalPlus';
+  font-size: 12px;
+}
+
+/* universal background color */
+body {
+  background-color: #ffffff; 
+}
+
+/* header image */
+header img {
+  width: 500px;
+  max-width: 98%;
+}
+
+/* clearfix hack to prevent image overflow. check out the W3Schools page on it. */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*FONTS*/
+
+/* header font */
+/* #showComic, header, h1, h2, h3, h4, h5 {
+  font-family: 'Montserrat';
+} */
+ 
+.writePageTitle h1 {
+  font-size: 24px;
+  /* font-weight: 400; */
+  margin: 0;
+}
+
+/* body font */
+.subPage p, footer, #authorNotes, .archiveTable {
+  font-size: 12;
+}
+
+/* STYLING FOR SUBPAGES (about, characters, etc) */
+
+/*general*/
+
+.subPage {
+  width: 1000px;
+  max-width: 98%;
+  background-color: #ffffff;
+  outline: 3px solid #000000;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 0px 12px 12px;
+}
+
+.subPage:not(.archivePage) {
+  text-align: center;
+}
+
+/* for pictures displayed to the left */
+.leftPic {
+  clear: left;
+  float:right;
+  margin-left:20px;
+}
+
+/* for pictures displayed to the left */
+.rightPic {
+  clear: right;
+  float:left;
+  margin-left:20px;
+}
+
+/* specific to Characters */
+.charTable, .charTable td { 
+  width: 100%;
+}
+
+/* link colors */
+a {
+      color: #000000;
+    }
+    
+
+/* HEADER */
+@media screen and (min-width: 320px) {
+  header {
+    align-items: center;
+  display: flex;
+  justify-content: center;
+  }
+}
+@media screen and (max-width: 319px) {
+  header #nav {
+    margin-left: 5%
+  }
+}
+
+header img {
+  width: 200px;
+}
+header #nav a {
+  font-size: 24px;
+  
+  position: relative;
+  left: 0px;
+  transition: left 0.1s ease-in-out;
+}
+
+header #nav a:hover {
+  left: 5px;
+}
+
+/* HOMEPAGE */
+
+/* style nav button images */
+.comicNav {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  font-family: "Montserrat", sans-serif;
+  font-size: xxx-large;
+  /* font-weight: bold; */
+}
+
+
+.comicNav a, span {
+  padding: 0 20px;
+}
+.comicNav a {
+  text-decoration: none;
+  position: relative;
+  top: 0px;
+  transition: top 0.1s ease-in-out;
+  
+}
+
+.comicNav a:hover {
+  top: -3px;
+}
+
+.comicNav .sidebutton {
+  font-size: x-large;
+  /* font-weight: 600; */
+}
+.comicNav span {
+  color: #a3a3a3;
+}
+.comicNav img {
+  width: 80px;
+  max-width: 98%;
+  padding-right: 30px;
+}
+
+/* style comic page image */
+.comicPage {
+  padding: 18px;
+  background: url('/img/bg.png');
+}
+.comicPage img {
+  width: 900px;
+  max-width: 98%;
+}
+
+/* style author notes */
+#authorNotes {
+  background-color:#ffffff;
+  /*outline: 3px solid #000000;*/
+  margin: auto;
+  padding: 3px;
+  padding-top: 1px;
+  width: 900px;
+  max-width: 98%;
+}
+
+/* ARCHIVE PAGE */
+
+/* style table in which archive is displayed */
+.archiveTable {
+  width: 90%;
+  border-collapse:collapse;
+}
+
+/* style archive table cells */
+.archiveTable td {
+  padding: 3px;
+  vertical-align: center;
+  
+}
+
+/* style table cell in which page title is displayed */
+.archiveCellTitle:not(.leftAlignTableText) {
+  max-width: 300px;
+  text-align: center;
+}
+
+.archiveCellDate {
+  text-align: right;
+  min-width: 120px;
+}
+
+.archiveCellNum {
+  text-align: center;
+  min-width: 30px;
+}
+
+/* style the thumbnails on the archive page */
+.archiveCellThumb {
+    width: 500px;
+    max-width: 60px;
+}
+.archiveCellThumb img{
+    max-width: 100%;
+  }
+
+/* for left aligning the text in a table cell */
+.leftAlignTableText td {
+  text-align: left;
+}
+
+/* highlight a table row and make pointer into hand when moused over */
+.archiveRow:hover {
+  background-color:  #afc7dd;
+  cursor: pointer;
+}
+
+/* FOOTER */
+footer {
+  margin-top: 12px;
+  margin-bottom: 15px;
+  text-align: center;
+  
+  font-size: 12px;
+}
+
+footer p {
+  margin: auto;
+}
+
+/* take away margins from the edges of the screen */
+html, body {
+  margin: 0;
+}
+

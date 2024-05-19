@@ -1,34 +1,44 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <title>somewhateverlasting</title>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>WebComic</title>
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
 
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <link rel="stylesheet" href="style.css">
+  <!-- most of the elements on these pages are defined in the js files as functions, then we tell these functions where to show up on the page by placing empty divs and naming those divs the name of the js functions. check the js files to edit these elements in more detail.-->
+  <div class="writeHeader"></div>
+  <div align="center">
+    <!-- header that has the logo image and top page navigation. don't forget to put this on every page -->
+    
 
-</head>
-<body>
-  <header>
-    <img src="assets/logo.png" width="200px">
-    <p>An experimental webcomic where I draw whatever I feel like.</p>
-  </header>
+    <!-- make sure that if you want to turn on automatically scrolling to the top of the comic when you load a new page, keep the id of this div and the variable "navScrollTo" in showcomic.js the same-->
+    <div id="showComic">
 
-  <div id="comic-area">
-    <img src="comics/1.png" width="500px">
+      <!-- write the title of the page. -->
+      <div class="writePageTitle"></div>
+      <!-- write top navigation -->
+      <div class="writeNav"></div>
+      <!-- write the current page of your comic -->
+      <div class="writePageClickable"></div>
+      <!-- write bottom navigation -->
+      <div class="writeNav"></div>
+      
+    </div>
+  </div>
+  <div id="authorNotes">
+    <!-- write the author notes for the current page-->
+    <div class="writeAuthorNotes"></div>
   </div>
 
-  <div id="comic-navigator">
-    <a class="hoverlink" title="Go to first comic">|<</a>
-    <a class="hoverlink" title="Previous comic"><</a>
-    <a class="hoverlink" title="Go to random comic">?</a>
-    <a class="hoverlink" title="Next comic">></a>
-    <a class="hoverlink" title="Go to last comic">>|</a>
-  </div>
-  
+<!-- footer that has a link back to rarebit, and ideally has copyright info and stuff. again, don't forget to put this on every page-->
+<div class="writeFooter"></div>
 
-  <footer>
-    <a href="https://piksalchaos.github.io/">HOME</a>
-  </footer>
-</body>
-</html> 
+  <!-- really important- every js script is called here, be sure to always put them just before the closing body tag, use a defer attribute, and call them in this specific order.-->
+    <script src="js/comic_settings.js" defer></script>
+    <script src="js/comic_show.js" defer></script>
+    <script src="js/comic_header.js" defer></script>
+    <script src="js/comic_footer.js" defer></script>
+  </body>
+</html>
