@@ -11,7 +11,7 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 ////////////////////////
 
 //REALLY IMPORTANT ONES
-const maxpg = 2; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
+const maxpg = 3; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
 //YOU MUST UPDATE THIS NUMBER EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
 // COMIC PAGE SETTINGS
@@ -65,6 +65,17 @@ const pgData = [
         imageFiles: 1, //how many image files this page is split into
         authorNotes: `
             <p>Instead of coding the entire webcomic website myself, I found this cool webcomic template called Rarebit which makes things super convenient! Hopefully at this point I can start pumping out weekly bad comics.</p>
+            `,
+    },
+    {
+        pgNum: 3, //what page number it is
+        title: "Carbon Dioxide - Part 1", //the title of the page (leaving this blank will default it to "Page X")
+        date: writeDate(2024, 5, 23), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
+        altText: "MSPaint is my favorite drawing program frfr.", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
+        imageFiles: 1, //how many image files this page is split into
+        authorNotes: `
+            <p>No but really if you breathe on a tree won't it grow like a little bit more? Just like a little little little little little little little little little little little little little little little little little bit more?</p>
+            <p>Theoretically, if the entire human population could breathe on one single tree (disregarding the fact that the humans would overlap each other's space and suffocate), then would the tree grow quicker?</p>
             `,
     }
 ];
