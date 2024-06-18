@@ -11,7 +11,7 @@ let pg = Number(findGetParameter("pg")); //make "pg" mean the current page numbe
 ////////////////////////
 
 //REALLY IMPORTANT ONES
-const maxpg = 3; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
+const maxpg = 4; //the current number of pages your comic has in total. this DOESNT necessarily mean number of IMAGE FILES as it doesn't count pages split into multiple files. 
 //YOU MUST UPDATE THIS NUMBER EVERY TIME YOU ADD A NEW PAGE or else it wont display the most recent page
 
 // COMIC PAGE SETTINGS
@@ -77,7 +77,20 @@ const pgData = [
             <p>No but really if you breathe on a tree won't it grow like a little bit more? Just like a little little little little little little little little little little little little little little little little little bit more?</p>
             <p>Theoretically, if the entire human population could breathe on one single tree (disregarding the fact that the humans would overlap each other's space and suffocate), then would the tree grow quicker?</p>
             `,
-    }
+    },
+    {
+        pgNum: 4, //what page number it is
+        title: "somewhateverlasting has lasted :(", //the title of the page (leaving this blank will default it to "Page X")
+        date: writeDate(2024, 6, 17), //the date on which the page was posted (mainly for the archive). The date is written using a function called "writeDate", basically just put writeDate and then some parenthesis and, comma separated, the year followed by the month and the day. Don't forget another comma at the end outside the parenthesis!
+        altText: ":(", //the alt text (mouse over text) for this particular comic. put nothing inbetween the quotes for no alt text
+        imageFiles: 1, //how many image files this page is split into
+        authorNotes: `
+            <p>Not like it really matters cuz nobody reads this comic anyways haha. I made this decision because I wanted to devote my time to other projects, and not this silly comic that I have to make something for every week (which I have not been doing).</p>
+            <p>Also, I sort of made this comic with the intention of improving my art and time management skills, but now I realize that this comic was the worst way of doing that, as I do not want people to see my baby art phases and making comics is kind of a waste of time if I have no intention of others seeing them. </p>
+            <p>I'll still keep this site up though. It won't be on my main website page, but it'll just be in the background, only able to be found if you remember the link (only I remember the link rn of course :P).</p>
+            <p>Maybe when I become an actual good artist and actually have a bit of a plan for this comic, I might come back to it. This comic has ended now, but it's just somewhat everlasting yknow. 
+            `,
+    },
 ];
 
 //below is a function you dont rly need to mess with but if you're more experienced with js you can
